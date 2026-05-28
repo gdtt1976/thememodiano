@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dora Bruder — Translation Slides</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;background:#252422;overflow:hidden;font-family:Georgia,serif}
+.slide{display:none;width:100vw;height:100vh;position:relative;flex-direction:column;
+        align-items:center;justify-content:center;padding:5vw 8vw}
+.slide.active{display:flex}
+
+/* ── Slide 1: French only ── */
+.s-fr{background:#FFFCF2}
+.badge{position:absolute;top:2.5rem;left:3rem;font-family:Arial,sans-serif;
+        font-size:.75rem;font-weight:700;letter-spacing:.12em;color:#fff;
+        background:#EB5E28;padding:.3em .8em;border-radius:2px}
+.fr-text{font-size:clamp(1.25rem,2.6vw,2.4rem);line-height:1.65;color:#252422;
+           text-align:center;max-width:900px;font-style:italic}
+.attr{position:absolute;bottom:3.5rem;font-family:Arial,sans-serif;
+       font-size:.75rem;color:#CCC5B9;letter-spacing:.05em}
+.ctr{position:absolute;bottom:1.2rem;right:2rem;font-family:Arial,sans-serif;
+      font-size:.7rem;color:#CCC5B9;letter-spacing:.08em}
+.ctr-dark{color:#CCC5B9}
+
+/* ── Slide 2: FR + EN ── */
+.s-fren{background:#FFFCF2;padding:0;justify-content:stretch;align-items:stretch}
+.fren-fr{flex:1;display:flex;align-items:center;padding:3vw 8vw 1.5vw;
+           border-left:5px solid #EB5E28;margin:3vw 6vw 0}
+.fren-fr-text{font-size:clamp(1rem,1.9vw,1.75rem);line-height:1.65;
+               color:#252422;font-style:italic}
+.divider{display:flex;align-items:center;gap:1rem;padding:0 6vw;
+          border-top:1px solid #CCC5B9;margin:0 6vw}
+.lang-badge{font-family:Arial,sans-serif;font-size:.65rem;font-weight:700;
+             letter-spacing:.12em;padding:.3em .75em;border-radius:2px;
+             white-space:nowrap;flex-shrink:0}
+.lb-fr{background:#EB5E28;color:#fff}
+.lb-en{background:#403D39;color:#FFFCF2}
+.fren-en{flex:1;display:flex;align-items:center;padding:1.5vw 8vw 3vw;
+           border-left:5px solid #403D39;margin:0 6vw 3vw}
+.fren-en-text{font-size:clamp(.9rem,1.7vw,1.55rem);line-height:1.7;
+               color:#403D39;font-family:Arial,sans-serif}
+
+/* ── Slide 3: Vocab ── */
+.s-vocab{background:#FFFCF2;justify-content:flex-start;padding:0}
+.vhdr{width:100%;background:#EB5E28;color:#fff;
+       font-family:Arial,sans-serif;font-weight:700;
+       font-size:clamp(.9rem,1.6vw,1.3rem);letter-spacing:.06em;
+       padding:1.1em 3rem;text-transform:uppercase}
+.vlist{padding:2rem 3rem 2rem 3.5rem;list-style:none;
+        display:flex;flex-direction:column;gap:.85em;overflow-y:auto;
+        max-height:calc(100vh - 7rem)}
+.vlist li{font-family:Arial,sans-serif;font-size:clamp(.8rem,1.35vw,1.1rem);
+           line-height:1.55;color:#403D39;padding-left:1.2em;
+           position:relative}
+.vlist li::before{content:"–";position:absolute;left:0;color:#EB5E28}
+.vlist li b.t{color:#EB5E28;font-weight:700}
+.vlist li span.ar{color:#CCC5B9;font-weight:400}
+.vlist li span.d{color:#403D39}
+.vlist li.n{color:#403D39}
+
+/* ── Nav bar ── */
+#nav{position:fixed;bottom:0;left:0;right:0;height:3rem;background:#252422;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0 1.5rem;z-index:100}
+.nav-btn{background:none;border:1.5px solid #EB5E28;color:#EB5E28;
+          font-family:Arial,sans-serif;font-size:.8rem;font-weight:700;
+          letter-spacing:.1em;padding:.4em 1.2em;cursor:pointer;
+          border-radius:2px;transition:background .15s,color .15s}
+.nav-btn:hover{background:#EB5E28;color:#fff}
+.nav-btn:disabled{opacity:.25;cursor:default}
+#counter{font-family:Arial,sans-serif;font-size:.8rem;color:#CCC5B9;letter-spacing:.08em}
+#hint{font-family:Arial,sans-serif;font-size:.65rem;color:#403D39;letter-spacing:.06em}
+</style>
+</head>
+<body>
+<div id="deck">
+<div class="slide s-fr" id="s1">
+  <div class="fr-text">Il y a huit ans, dans un vieux journal, Paris Soir, qui datait du 31 décembre 1941, je suis tombé à la page trois sur une rubrique : « D&#x27;hier à aujourd&#x27;hui ». Au bas de celle-ci, j&#x27;ai lu :</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">1 / 39</div>
+</div>
+<div class="slide s-fren" id="s2">
+  <div class="fren-fr">
+    <p class="fren-fr-text">Il y a huit ans, dans un vieux journal, Paris Soir, qui datait du 31 décembre 1941, je suis tombé à la page trois sur une rubrique : « D&#x27;hier à aujourd&#x27;hui ». Au bas de celle-ci, j&#x27;ai lu :</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">Eight years ago, in a back issue of a newspaper, Paris Soir, dated / published on 31 December 1941, I stumbled upon a section on page three, titled “Then and Now” / “Overnight”. At the bottom of it I read:</p>
+  </div>
+  <div class="ctr">2 / 39</div>
+</div>
+<div class="slide s-vocab" id="s3">
+  <div class="vhdr">Newspaper vocabulary</div>
+  <ul class="vlist"><li><b class="t">to stumble across / upon</b><span class="ar"> → </span><span class="d">tomber sur (conveys the accidental, lucky nature of the find; prefer over “to find”)</span></li><li><b class="t">to come across / to chance upon</b><span class="ar"> → </span><span class="d">slightly more neutral alternatives</span></li><li><b class="t">a back issue</b><span class="ar"> → </span><span class="d">un ancien numéro (a specific past edition); a copy → un exemplaire</span></li><li><b class="t">a column / a feature / a section</b><span class="ar"> → </span><span class="d">une rubrique (regular slot in a publication)</span></li><li><b class="t">to leaf through / to browse a paper</b><span class="ar"> → </span><span class="d">feuilleter; to scan → parcourir des yeux</span></li><li><b class="t">a headline</b><span class="ar"> → </span><span class="d">une manchette; the front page → la une; to make the front page → faire la une; above the fold → en haut de page</span></li></ul>
+  <div class="ctr ctr-dark">3 / 39</div>
+</div>
+<div class="slide s-fr" id="s4">
+  <div class="fr-text">« PARIS. On recherche une jeune fille, Dora Bruder, 15 ans, 1m55, visage ovale, yeux gris-marron, manteau sport gris, pull-over bordeaux, jupe et chapeau bleu marine, chaussures sport marron. Adresser toutes indications à M. et Mme Bruder, 41 boulevard Ornano, Paris. »</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">4 / 39</div>
+</div>
+<div class="slide s-fren" id="s5">
+  <div class="fren-fr">
+    <p class="fren-fr-text">« PARIS. On recherche une jeune fille, Dora Bruder, 15 ans, 1m55, visage ovale, yeux gris-marron, manteau sport gris, pull-over bordeaux, jupe et chapeau bleu marine, chaussures sport marron. Adresser toutes indications à M. et Mme Bruder, 41 boulevard Ornano, Paris. »</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">‘PARIS. Missing: a young girl, Dora Bruder, aged 15, 1.55 m / 5 ft 1 in, oval face, grey-brown eyes, grey sports coat, burgundy / maroon jumper, navy blue skirt and hat, brown trainers / sneakers. Please send any information to M. and Mme Bruder, 41 boulevard Ornano, Paris.’</p>
+  </div>
+  <div class="ctr">5 / 39</div>
+</div>
+<div class="slide s-vocab" id="s6">
+  <div class="vhdr">Missing persons &amp; clothing vocabulary</div>
+  <ul class="vlist"><li><b class="t">to go missing</b><span class="ar"> → </span><span class="d">disparaître ; a missing person → une personne disparue ; missing persons notice → avis de recherche</span></li><li><b class="t">hazel</b><span class="ar"> → </span><span class="d">noisette (a warmer brown-green)</span></li><li><b class="t">Colour terms: bordeaux = burgundy (UK) / maroon (US/AU) — wine-red; navy blue</b><span class="ar"> → </span><span class="d">bleu marine</span></li><li><b class="t">a jumper (UK) / a sweater / a pullover (neutral)</b><span class="ar"> → </span><span class="d">un pull-over</span></li><li><b class="t">trainers (UK) / sneakers (US) / sports shoes (neutral)</b><span class="ar"> → </span><span class="d">chaussures sport</span></li><li><b class="t">to submit / to pass on / to forward any information</b><span class="ar"> → </span><span class="d">adresser des indications; any leads → des pistes; to tip off → prévenir, donner un tuyau (informal)</span></li></ul>
+  <div class="ctr ctr-dark">6 / 39</div>
+</div>
+<div class="slide s-fr" id="s7">
+  <div class="fr-text">Ce quartier du boulevard Ornano, je le connais depuis longtemps.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">7 / 39</div>
+</div>
+<div class="slide s-fren" id="s8">
+  <div class="fren-fr">
+    <p class="fren-fr-text">Ce quartier du boulevard Ornano, je le connais depuis longtemps.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">I’ve known it for years / a long time, that part of the world around boulevard Ornano. / That neighbourhood — boulevard Ornano — I have known it for a long time.</p>
+  </div>
+  <div class="ctr">8 / 39</div>
+</div>
+<div class="slide s-vocab" id="s9">
+  <div class="vhdr">Syntax &amp; time expressions</div>
+  <ul class="vlist"><li><b class="t">depuis + present</b><span class="ar"> → </span><span class="d">English present perfect: “I have known it for years” (not “I know it since a long time”)</span></li><li class="n">a neighbourhood / a district / a quarter</li><li><b class="t">to be familiar with / to know well / to know like the back of one’s hand</b><span class="ar"> → </span><span class="d">connaître bien / connaître par cœur</span></li></ul>
+  <div class="ctr ctr-dark">9 / 39</div>
+</div>
+<div class="slide s-fr" id="s10">
+  <div class="fr-text">Dans mon enfance, j’accompagnais ma mère au marché aux Puces de Saint-Ouen.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">10 / 39</div>
+</div>
+<div class="slide s-fren" id="s11">
+  <div class="fren-fr">
+    <p class="fren-fr-text">Dans mon enfance, j’accompagnais ma mère au marché aux Puces de Saint-Ouen.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">As a child, I would go with my mother to the Saint-Ouen flea market. / I used to tag along when my mother went to…</p>
+  </div>
+  <div class="ctr">11 / 39</div>
+</div>
+<div class="slide s-vocab" id="s12">
+  <div class="vhdr">The French imperfect &amp; childhood memories</div>
+  <ul class="vlist"><li><b class="t">The imperfect of habit</b><span class="ar"> → </span><span class="d">English “would + infinitive” (literary) or “used to + infinitive”: “I would go” / “I used to go”</span></li><li><b class="t">to tag along</b><span class="ar"> → </span><span class="d">suivre quelqu’un, accompagner (informal; implies willing but secondary participation)</span></li><li><b class="t">to accompany</b><span class="ar"> → </span><span class="d">formal; to go with → neutral; to trail after → to follow somewhat passively</span></li><li><b class="t">a flea market</b><span class="ar"> → </span><span class="d">un marché aux puces; a car boot sale (UK); a jumble sale; a swap meet (US)</span></li><li class="n">dans mon enfance / as a child / when I was growing up / in my childhood years</li></ul>
+  <div class="ctr ctr-dark">12 / 39</div>
+</div>
+<div class="slide s-fr" id="s13">
+  <div class="fr-text">Nous descendions de l’autobus à la porte de Clignancourt et quelquefois devant la mairie du XVIIIᵉ arrondissement.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">13 / 39</div>
+</div>
+<div class="slide s-fren" id="s14">
+  <div class="fren-fr">
+    <p class="fren-fr-text">Nous descendions de l’autobus à la porte de Clignancourt et quelquefois devant la mairie du XVIIIᵉ arrondissement.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">We would get off the bus at Porte de Clignancourt, and sometimes outside the town hall of the 18th arrondissement.</p>
+  </div>
+  <div class="ctr">14 / 39</div>
+</div>
+<div class="slide s-vocab" id="s15">
+  <div class="vhdr">Transport &amp; urban geography</div>
+  <ul class="vlist"><li class="n">to get off (a bus, train) ↔ to get on / to board; to alight from (formal / literary); to disembark (vehicles, ships)</li><li class="n">a town hall (UK) / a city hall (US); a borough council (London equivalent, imperfect); arrondissement: often left untranslated in English texts about Paris</li><li class="n">sometimes / occasionally / now and then / on occasion / every so often</li></ul>
+  <div class="ctr ctr-dark">15 / 39</div>
+</div>
+<div class="slide s-fr" id="s16">
+  <div class="fr-text">C’était toujours le samedi ou le dimanche après-midi.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">16 / 39</div>
+</div>
+<div class="slide s-fren" id="s17">
+  <div class="fren-fr">
+    <p class="fren-fr-text">C’était toujours le samedi ou le dimanche après-midi.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">It was always on Saturday or a Sunday afternoon. / It was invariably a Saturday or Sunday afternoon.</p>
+  </div>
+  <div class="ctr">17 / 39</div>
+</div>
+<div class="slide s-vocab" id="s18">
+  <div class="vhdr">Frequency &amp; time</div>
+  <ul class="vlist"><li><b class="t">always / invariably / without fail / unfailingly / as a rule</b><span class="ar"> → </span><span class="d">toujours</span></li><li class="n">on Saturdays (habitual) vs on a Saturday (one specific occasion) — here the imperfect calls for habitual: “on Saturdays or Sundays”</li><li class="n">an afternoon / in the afternoon / of an afternoon (the latter is slightly archaic and literary)</li></ul>
+  <div class="ctr ctr-dark">18 / 39</div>
+</div>
+<div class="slide s-fr" id="s19">
+  <div class="fr-text">En hiver, sur le trottoir de l’avenue, le long de la caserne Clignancourt, dans le flot des passants, se tenait, avec son appareil à trépied, le gros photographe au nez grumeleux et aux lunettes rondes qui proposait une « photo souvenir ».</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">19 / 39</div>
+</div>
+<div class="slide s-fren" id="s20">
+  <div class="fren-fr">
+    <p class="fren-fr-text">En hiver, sur le trottoir de l’avenue, le long de la caserne Clignancourt, dans le flot des passants, se tenait, avec son appareil à trépied, le gros photographe au nez grumeleux et aux lunettes rondes qui proposait une « photo souvenir ».</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">In winter, on the pavement (UK) / sidewalk (US) (that stretched) along the Clignancourt barracks on the avenue, amid the stream / flow / throng of passers-by, stood the portly / heavyset photographer, with his tripod-mounted camera, his lumpy / bulbous nose and his round glasses / spectacles, touting / offering / trying to sell you a souvenir photograph.</p>
+  </div>
+  <div class="ctr">20 / 39</div>
+</div>
+<div class="slide s-vocab" id="s21">
+  <div class="vhdr">Physical description &amp; crowd vocabulary</div>
+  <ul class="vlist"><li><b class="t">portly / heavyset / stocky / rotund / stout</b><span class="ar"> → </span><span class="d">alternatives to “fat” for gros; “portly” suits the period and tone</span></li><li><b class="t">lumpy / bumpy / knobbly / bulbous</b><span class="ar"> → </span><span class="d">grumeleux (texture, irregularity of surface); “bulbous” works well for a nose</span></li><li><b class="t">a throng / a stream / a flow / a tide / a crowd</b><span class="ar"> → </span><span class="d">le flot</span></li><li class="n">passers-by (always hyphenated in the plural); pedestrians; onlookers</li><li><b class="t">to tout / to offer / to pitch / to flog (informal)</b><span class="ar"> → </span><span class="d">proposer; “tout” captures the commercial insistence</span></li><li><b class="t">a tripod</b><span class="ar"> → </span><span class="d">un trépied; tripod-mounted / set on a tripod</span></li><li class="n">round / wire-rimmed / horn-rimmed spectacles / glasses; spectacles is more literary/formal than glasses</li></ul>
+  <div class="ctr ctr-dark">21 / 39</div>
+</div>
+<div class="slide s-fr" id="s22">
+  <div class="fr-text">L’été, il se postait sur les planches de Deauville, devant le bar du Soleil.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">22 / 39</div>
+</div>
+<div class="slide s-fren" id="s23">
+  <div class="fren-fr">
+    <p class="fren-fr-text">L’été, il se postait sur les planches de Deauville, devant le bar du Soleil.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">In the summer, he would set himself up / set up shop / position himself / take up his spot on the boardwalk / promenade in Deauville, outside the bar du Soleil.</p>
+  </div>
+  <div class="ctr">23 / 39</div>
+</div>
+<div class="slide s-vocab" id="s24">
+  <div class="vhdr">Positioning &amp; seaside vocabulary</div>
+  <ul class="vlist"><li><b class="t">to set up shop / to take up one’s post / to station oneself / to pitch up</b><span class="ar"> → </span><span class="d">se poster (implies deliberate, habitual positioning)</span></li><li class="n">les planches is specific to Deauville and Trouville — the famous wooden seafront promenade; English equivalents: the boardwalk (US/general), the promenade (UK), the seafront</li><li><b class="t">outside / in front of / opposite</b><span class="ar"> → </span><span class="d">devant</span></li><li class="n">in summer / in the summer / during the summer months / come summer</li></ul>
+  <div class="ctr ctr-dark">24 / 39</div>
+</div>
+<div class="slide s-fr" id="s25">
+  <div class="fr-text">Il y trouvait des clients.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">25 / 39</div>
+</div>
+<div class="slide s-fren" id="s26">
+  <div class="fren-fr">
+    <p class="fren-fr-text">Il y trouvait des clients.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">He did get customers there. / There, at least, he found customers. / He managed to find customers there.</p>
+  </div>
+  <div class="ctr">26 / 39</div>
+</div>
+<div class="slide s-vocab" id="s27">
+  <div class="vhdr">Register &amp; emphasis</div>
+  <ul class="vlist"><li class="n">to find / to attract / to pick up customers; “he did get customers” uses the emphatic do to contrast with the next sentence</li><li><b class="t">the emphatic “do” in English (I did go / he did find)</b><span class="ar"> → </span><span class="d">no direct equivalent in French; it marks contrast or insistence</span></li><li><b class="t">clientele / custom / trade</b><span class="ar"> → </span><span class="d">des clients</span></li></ul>
+  <div class="ctr ctr-dark">27 / 39</div>
+</div>
+<div class="slide s-fr" id="s28">
+  <div class="fr-text">Mais là, porte de Clignancourt, les passants ne semblaient pas vouloir se faire photographier.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">28 / 39</div>
+</div>
+<div class="slide s-fren" id="s29">
+  <div class="fren-fr">
+    <p class="fren-fr-text">Mais là, porte de Clignancourt, les passants ne semblaient pas vouloir se faire photographier.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">But there, at Porte de Clignancourt, the passers-by seemed unwilling to have their picture / photograph taken. / …showed no interest in being photographed.</p>
+  </div>
+  <div class="ctr">29 / 39</div>
+</div>
+<div class="slide s-vocab" id="s30">
+  <div class="vhdr">se faire + infinitive</div>
+  <ul class="vlist"><li><b class="t">se faire + infinitif</b><span class="ar"> → </span><span class="d">to have / get + past participle: “to have one’s picture taken” / “to get one’s photo taken”</span></li><li class="n">to be photographed / to sit for a photo / to pose for a photo</li><li class="n">to seem unwilling to / to show no interest in / not to want to</li><li><b class="t">reluctant</b><span class="ar"> → </span><span class="d">réticent, peu enclin à; “the passers-by showed little inclination to be photographed”</span></li></ul>
+  <div class="ctr ctr-dark">30 / 39</div>
+</div>
+<div class="slide s-fr" id="s31">
+  <div class="fr-text">Il portait un vieux pardessus et l’une de ses chaussures était trouée.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">31 / 39</div>
+</div>
+<div class="slide s-fren" id="s32">
+  <div class="fren-fr">
+    <p class="fren-fr-text">Il portait un vieux pardessus et l’une de ses chaussures était trouée.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">He wore / was wearing an old overcoat, and one of his shoes had a hole in it. / …one of his shoes had worn through.</p>
+  </div>
+  <div class="ctr">32 / 39</div>
+</div>
+<div class="slide s-vocab" id="s33">
+  <div class="vhdr">Clothing &amp; the imperfect</div>
+  <ul class="vlist"><li><b class="t">an overcoat / a topcoat / a greatcoat</b><span class="ar"> → </span><span class="d">un pardessus (heavy, usually formal outer coat; “greatcoat” has a military or period feel)</span></li><li class="n">worn through / full of holes / with a hole in the sole / with a hole worn in it</li><li><b class="t">threadbare / tattered / in tatters / shabby / down-at-heel</b><span class="ar"> → </span><span class="d">useful adjectives for describing poverty-stricken dress</span></li></ul>
+  <div class="ctr ctr-dark">33 / 39</div>
+</div>
+<div class="slide s-fr" id="s34">
+  <div class="fr-text">Je me souviens du boulevard Barbès et du boulevard Ornano déserts, un dimanche après-midi de soleil, en mai 1958.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">34 / 39</div>
+</div>
+<div class="slide s-fren" id="s35">
+  <div class="fren-fr">
+    <p class="fren-fr-text">Je me souviens du boulevard Barbès et du boulevard Ornano déserts, un dimanche après-midi de soleil, en mai 1958.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">I remember the boulevards Barbès and Ornano, deserted / empty on a sunny Sunday afternoon in May 1958.</p>
+  </div>
+  <div class="ctr">35 / 39</div>
+</div>
+<div class="slide s-vocab" id="s36">
+  <div class="vhdr">Memory &amp; adjective placement</div>
+  <ul class="vlist"><li><b class="t">deserted / empty / desolate / abandoned / eerily quiet</b><span class="ar"> → </span><span class="d">désert(e)</span></li><li><b class="t">to remember / to recall / to have a memory of / to retain a memory of</b><span class="ar"> → </span><span class="d">se souvenir de</span></li></ul>
+  <div class="ctr ctr-dark">36 / 39</div>
+</div>
+<div class="slide s-fr" id="s37">
+  <div class="fr-text">À chaque carrefour, des groupes de gardes mobiles, à cause des événements d’Algérie.</div>
+  <div class="attr">Patrick Modiano, <em>Dora Bruder</em> (1997)</div>
+  <div class="ctr">37 / 39</div>
+</div>
+<div class="slide s-fren" id="s38">
+  <div class="fren-fr">
+    <p class="fren-fr-text">À chaque carrefour, des groupes de gardes mobiles, à cause des événements d’Algérie.</p>
+  </div>
+  <div class="divider"></div>
+  <div class="fren-en">
+    <p class="fren-en-text">At each crossroads / junction / intersection / street corner, groups of riot police / mobile guards, because of / owing to / on account of the events in Algeria.</p>
+  </div>
+  <div class="ctr">38 / 39</div>
+</div>
+<div class="slide s-vocab" id="s39">
+  <div class="vhdr">Historical vocabulary &amp; prepositions of cause</div>
+  <ul class="vlist"><li><b class="t">at each crossroads / at every corner / at each junction / at every intersection</b><span class="ar"> → </span><span class="d">à chaque carrefour</span></li><li><b class="t">les gardes mobiles</b><span class="ar"> → </span><span class="d">mobile police units, riot police, the CRS (Compagnies Républicaines de Sécurité) — no clean English equivalent; “mobile police” or “riot police” are the closest</span></li><li><b class="t">because of / owing to / due to / on account of</b><span class="ar"> → </span><span class="d">à cause de</span></li><li class="n">Historical note: les événements d’Algérie was the French government’s official euphemism for what was in fact the Algerian War of Independence (1954–1962) — “war” (guerre) was deliberately avoided.</li></ul>
+  <div class="ctr ctr-dark">39 / 39</div>
+</div>
+</div>
+<div id="nav">
+  <button class="nav-btn" id="prev" onclick="go(-1)">← PREV</button>
+  <span id="hint">← → arrow keys</span>
+  <span id="counter">1 / 39</span>
+  <button class="nav-btn" id="next" onclick="go(1)">NEXT →</button>
+</div>
+<script>
+var cur=1,tot=39;
+function show(n){
+  var prev=document.getElementById('s'+cur);
+  if(prev)prev.classList.remove('active');
+  cur=Math.max(1,Math.min(n,tot));
+  var el=document.getElementById('s'+cur);
+  if(el)el.classList.add('active');
+  document.getElementById('counter').textContent=cur+' / '+tot;
+  document.getElementById('prev').disabled=(cur===1);
+  document.getElementById('next').disabled=(cur===tot);
+}
+function go(d){show(cur+d);}
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key===' ')go(1);
+  else if(e.key==='ArrowLeft')go(-1);
+});
+show(1);
+</script>
+</body>
+</html>
